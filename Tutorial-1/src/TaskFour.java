@@ -97,11 +97,14 @@ public class TaskFour {
 
     public static int[] sortMarks(int[] array){
         int min = 0;
-        for (int i = 0; i < array.length -1; i++) {
-            if(array[i] > array[i+1]){
-                min = array[i+1];
-                array[i+1] = array[i];
-                array[i] = min;
+        for (int i = 0; i < array.length-1; i++) {
+            for (int j = 0; j < array.length-1-i; j++) {
+                if(array[i] > array[i+1]){
+                    min = array[i];
+                    array[i] = array[i+1];
+                    array[i+1] = min;
+                    break;
+                }
             }
         }
         return array;
