@@ -26,11 +26,11 @@ public class TaskFour {
         for (int i = 0; i < marks.length; i++) {
             if (marks[i] >=  70){
                 first++;
-            } else if (marks[i] <= 60) {
+            } else if (marks[i] >= 60) {
                 twoIsOne++;
-            }else if (marks[i] <= 50) {
+            }else if (marks[i] >= 50) {
                 twoIsTwo++;
-            }else if (marks[i] <= 40) {
+            }else if (marks[i] >= 40) {
                 pass++;
             }else {
                 fail++;
@@ -39,8 +39,8 @@ public class TaskFour {
 
         System.out.println("No of people failed : " + fail);
         System.out.println("No of people passed : " + pass);
-        System.out.println("No of people from 50 to 59 (2:2) : " + twoIsTwo);
-        System.out.println("No of people from 60 to 69 (2:1) : " + twoIsOne);
+        System.out.println("No of people from 50 to 59 (2:2) : " + twoIsOne);
+        System.out.println("No of people from 60 to 69 (2:1) : " + twoIsTwo);
         System.out.println("No of people who got above 70 : " + first);
 
 
@@ -50,12 +50,18 @@ public class TaskFour {
 
         //Calling the method to get the max marks
         int maxMark = maxMarks(marks);
-        System.out.println("\nThe maximum mark is : "+ average);
+        System.out.println("\nThe maximum mark is : "+ maxMark);
 
-        //Calling the method to get the max marks
+        //Calling the method to get the min marks
         int minMark = minMarks(marks);
-        System.out.println("\nThe minimum mark is : "+ average);
+        System.out.println("\nThe minimum mark is : "+ minMark);
 
+        //Calling the method to sort the max marks
+        int[] sortedList = sortMarks(marks);
+        System.out.print("Sorted List : ");
+        for (int i = 0; i < sortedList.length; i++) {
+            System.out.print(sortedList[i] + ", ");
+        }
     }
 
     public static double averageCalculator(int[] array){
@@ -64,9 +70,7 @@ public class TaskFour {
             total += array[i];
         }
 
-        double average = (double) total / 6;
-
-        return average;
+        return (double) total / 6;
     }
 
     public static int maxMarks(int[] array){
@@ -81,11 +85,25 @@ public class TaskFour {
 
     public static int minMarks(int[] array){
         int min = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < min){
+        for (int i = 0; i < array.length-1; i++) {
+            if (array[i] < array[i+1]){
                 min = array[i];
+            }else{
+                min = array[i+1];
             }
         }
         return min;
+    }
+
+    public static int[] sortMarks(int[] array){
+        int min = 0;
+        for (int i = 0; i < array.length -1; i++) {
+            if(array[i] > array[i+1]){
+                min = array[i+1];
+                array[i+1] = array[i];
+                array[i] = min;
+            }
+        }
+        return array;
     }
 }
