@@ -5,7 +5,7 @@ public class TaskFour {
         Scanner input = new Scanner(System.in);
 
         int mark = 0;
-        int marks[] = new int [6];
+        int[] marks = new int [6];
 
         for (int i = 0; i < 6; i++) {
             System.out.print("Enter your marks : ");
@@ -49,12 +49,16 @@ public class TaskFour {
         System.out.println("\nThe average is : "+ average);
 
         //Calling the method to get the max marks
-        double maxMark = maxMarks(marks);
-        System.out.println("\nThe average is : "+ average);
+        int maxMark = maxMarks(marks);
+        System.out.println("\nThe maximum mark is : "+ average);
+
+        //Calling the method to get the max marks
+        int minMark = minMarks(marks);
+        System.out.println("\nThe minimum mark is : "+ average);
 
     }
 
-    public static double averageCalculator(int array[]){
+    public static double averageCalculator(int[] array){
         int total = 0;
         for (int i = 0; i < array.length; i++) {
             total += array[i];
@@ -65,7 +69,7 @@ public class TaskFour {
         return average;
     }
 
-    public static double maxMarks(int array[]){
+    public static int maxMarks(int[] array){
         int max = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] > max){
@@ -73,5 +77,15 @@ public class TaskFour {
             }
         }
         return max;
+    }
+
+    public static int minMarks(int[] array){
+        int min = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min){
+                min = array[i];
+            }
+        }
+        return min;
     }
 }
