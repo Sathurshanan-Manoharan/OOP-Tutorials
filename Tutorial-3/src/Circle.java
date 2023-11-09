@@ -1,33 +1,40 @@
 public class Circle {
-    private double radius = 1.0;
-    private String colour = "Blue";
+    private double radius = 1;
+    private String color = "Blue";
 
-    Circle(){
-
-    }
-    Circle(double r){
-        this.radius = r;
+    public Circle(){
+        this.radius = 1;
+        this.color = "Blue";
     }
 
-    Circle(double r, String colour){
-        this.radius = r;
-        this.colour = colour;
+    public Circle(double radius){
+        this.radius = radius;
+    }
+
+    public Circle(double radius,String color){
+        this.radius = radius;
+        this.color = color;
     }
 
     public double getRadius(){
-        return radius;
+        return this.radius;
+    }
+
+    public double getArea(){
+        return this.radius * this.radius * Math.PI;
+    }
+
+    public String getColor(){
+        return this.color;
     }
 
     public void setRadius(double radius) {
         this.radius = radius;
     }
 
-    public String getColour() {
-        return colour;
+    public void setColor(String color) {
+        this.color = color;
     }
-
-    public void setColour(String colour) {
-        this.colour = colour;
-    }
-    
 }
+
+
