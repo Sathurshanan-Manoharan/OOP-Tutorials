@@ -1,9 +1,11 @@
 public class Circle extends GeometricObject{
-        protected double radius;
+        protected double radius; //radius attribute for circle
 
+        //Default constructor
         public Circle(){
         }
 
+        //constructor with radius as parameter
         public Circle(double radius){
                 this.radius = radius;
         }
@@ -27,7 +29,7 @@ public class Circle extends GeometricObject{
         }
 
         @Override
-        public double getParameter() {
+        public double getPerimeter() {
                 return 2 * (22/7) * radius;
         }
 

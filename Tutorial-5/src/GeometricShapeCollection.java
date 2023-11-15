@@ -25,11 +25,11 @@ public class GeometricShapeCollection implements ShapeCollection{
     public void printShapeList() {
         for(int i=0; i < shapeList.size(); i++){
             if(shapeList.get(i).getShape().equals("Circle")){
-                System.out.println("Shape = Circle, Area = " + shapeList.get(i).getArea() + ", Perimeter = " + shapeList.get(i).getParameter());
+                System.out.println("Shape = Circle, Area = " + shapeList.get(i).getArea() + ", Perimeter = " + shapeList.get(i).getPerimeter());
             } else if (shapeList.get(i).getShape().equals("Square")) {
-                System.out.println("Shape = Square, Area = " + shapeList.get(i).getArea() + ", Parameter = " + shapeList.get(i).getParameter());
+                System.out.println("Shape = Square, Area = " + shapeList.get(i).getArea() + ", Perimeter = " + shapeList.get(i).getPerimeter());
             }else{
-                System.out.println("Shape = Rectangle, Area = " + shapeList.get(i).getArea() + ", Parameter = " + shapeList.get(i).getParameter());
+                System.out.println("Shape = Rectangle, Area = " + shapeList.get(i).getArea() + ", Perimeter = " + shapeList.get(i).getPerimeter());
             }
         }
     }

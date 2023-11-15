@@ -2,6 +2,7 @@ public class Rectangle extends GeometricObject{
     protected double length;
     protected double width;
 
+    //Default constructor
     public Rectangle(){
     }
 
@@ -43,7 +44,7 @@ public class Rectangle extends GeometricObject{
     }
 
     @Override
-    public double getParameter() {
+    public double getPerimeter() {
         return (length * 2) + (width * 2);
     }
 

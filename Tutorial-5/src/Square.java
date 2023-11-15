@@ -1,6 +1,7 @@
 public class Square extends GeometricObject{
     protected double side;
 
+    //Default constructor
     public Square(){
     }
 
@@ -25,7 +26,7 @@ public class Square extends GeometricObject{
     }
 
     @Override
-    public double getParameter() {
+    public double getPerimeter() {
         return side * 4;
     }
 
