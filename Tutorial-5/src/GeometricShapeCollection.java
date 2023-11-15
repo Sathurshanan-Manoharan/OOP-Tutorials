@@ -26,51 +26,70 @@ public class GeometricShapeCollection implements ShapeCollection{
         for(int i=0; i < shapeList.size(); i++){
             if(shapeList.get(i).getShape().equals("Circle")){
                 System.out.println("Shape = Circle, Area = " + shapeList.get(i).getArea() + ", Perimeter = " + shapeList.get(i).getParameter());
+            } else if (shapeList.get(i).getShape().equals("Square")) {
+                System.out.println("Shape = Square, Area = " + shapeList.get(i).getArea() + ", Parameter = " + shapeList.get(i).getParameter());
+            }else{
+                System.out.println("Shape = Rectangle, Area = " + shapeList.get(i).getArea() + ", Parameter = " + shapeList.get(i).getParameter());
             }
-// continue the implementation of this method and write here code to verify if it is a rectangle or a square and print the area and the perimeter
         }
     }
 
     @Override
     public boolean runMenu() {
         boolean exit = false;
-        System.out.println("To Add a new shape press 1");
-        System.out.println("To print the list of the shapes press 2");
-        System.out.println("To exit press 3");
+        System.out.println("1. To Add a new shape press 1");
+        System.out.println("2. To print the list of the shapes press 2");
+        System.out.println("3. To exit press 3");
+        System.out.print("Enter your choice : ");
         Scanner s = new Scanner (System.in);
-        int choise = s.nextInt();
-        switch(choise){
+        int choice = s.nextInt();
+        switch(choice){
             case 1:
                 System.out.println("Press 1 if you want to add a Circle");
                 System.out.println("Press 2 if you want to add a Rectangle");
                 System.out.println("Press 3 if you want to add a Square");
+                System.out.print("Enter your desired object : ");
 
-                int choise2 = s.nextInt();
-                s.nextLine();
+                int choice2 = s.nextInt();
+//                s.nextLine();
 
-                System.out.println("Enter the color of your shape");
-                String colour = s.nextLine();
+                System.out.print("Enter the color of your shape : ");
+                String colour = s.next();
 
-                System.out.println("Is it filled? (y/n)");
-                String isFilled = s.nextLine();
+                System.out.print("Is it filled? (y/n) : ");
+                String isFilled = s.next();
                 boolean filled = false;
 
                 if (isFilled.equals("y")) filled = true;
                 else if (isFilled.equals("n")) filled = false;
                 else
                 System.out.println("Please enter y or n, if the shape is filled or not respectively");
-                switch (choise2){
+                switch (choice2){
                     case 1:
-                        // it is a circle
-                        System.out.println("Insert the radius");
+                        // its a circle
+                        System.out.print("Insert the radius : ");
                         int radius = s.nextInt();
-                        Circle c = new Circle(radius, colour, filled);
-                        this.addShape(c);
+                        Circle circle = new Circle(radius, colour, filled);
+                        this.addShape(circle);
                         break;
                     case 2:
                         // TODO - write here the code if the rectangle is selected
+                        // its a rectangle
+                        System.out.print("Insert the length :");
+                        int length = s.nextInt();
+                        System.out.print("Insert the width :");
+                        int width = s.nextInt();
+                        Rectangle rectangle = new Rectangle(length, width, colour, filled);
+                        this.addShape(rectangle);
+                        break;
                     case 3:
                         // TODO - write here the code if the square is selected
+                        // its a square
+                        System.out.print("Insert the side :");
+                        int side = s.nextInt();
+                        Square square = new Square(side, colour, filled);
+                        this.addShape(square);
+                        break;
                 }
                 break;
             case 2:
