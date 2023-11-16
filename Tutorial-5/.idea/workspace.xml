@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ccad6cce-fbaf-42e9-8183-1524a3443c9e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeometricObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeometricShapeCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeometricShapeCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Square.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699951631740</updated>
       <workItem from="1699951632877" duration="12132000" />
-      <workItem from="1700048388135" duration="6920000" />
+      <workItem from="1700048388135" duration="7970000" />
     </task>
     <servers />
   </component>
