@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        // create a parking
+        // creating a GeometricShapeCollection object
         ShapeCollection sys = new GeometricShapeCollection(10);
         boolean exit = false;
         while (!exit){

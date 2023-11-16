@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/src/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Circle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeometricObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeometricObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeometricShapeCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeometricShapeCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Square.java" afterDir="false" />
     </list>
@@ -73,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699951631740</updated>
       <workItem from="1699951632877" duration="12132000" />
-      <workItem from="1700048388135" duration="3094000" />
+      <workItem from="1700048388135" duration="6920000" />
     </task>
     <servers />
   </component>

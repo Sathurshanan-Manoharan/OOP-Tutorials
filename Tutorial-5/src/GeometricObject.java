@@ -27,10 +27,7 @@ public abstract class GeometricObject {
         this.colour = colour;
     }
 
-    /**
-     * Method that returns a boolean to show whether the shape is filled or not
-     * @return
-     */
+    // Method that returns a boolean to show whether the shape is filled or not
     public boolean isFilled() {
         return filled;
     }
