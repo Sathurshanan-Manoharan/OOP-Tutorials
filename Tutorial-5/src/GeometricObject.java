@@ -22,17 +22,26 @@ public abstract class GeometricObject {
         return colour;
     }
 
-    //Method to set the colour of the shape
+    /**
+     * Method to set the colour of the shape
+     * @param colour
+     */
     public void setColour(String colour) {
         this.colour = colour;
     }
 
-    // Method that returns a boolean to show whether the shape is filled or not
+    /**
+     * Method that returns a boolean to show whether the shape is filled or not
+     * @return
+     */
     public boolean isFilled() {
         return filled;
     }
 
-    //Method to set a boolean to decide whether the shape is filled or not
+    /**
+     * Method to set a boolean to decide whether the shape is filled or not
+     * @param filled
+     */
     public void setFilled(boolean filled) {
         this.filled = filled;
     }
