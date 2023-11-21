@@ -1,14 +1,13 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
 
 public class QuestionFour {
     public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
         boolean isExit = true;
         ArrayList<Book> books = new ArrayList<>();
-        while(isExit){
+        while (isExit) {
 
-            Scanner input = new Scanner(System.in);
             System.out.print("Enter Book title : ");
             String title = input.next();
             System.out.print("Enter Book price : ");
@@ -22,7 +21,7 @@ public class QuestionFour {
 
             System.out.print("Press y to continue or n to exit :");
             String exit = input.next();
-            if (exit.equals("n"))isExit = false;
+            if (exit.equals("n")) isExit = false;
             else continue;
 
             for (int i = 0; i < books.size(); i++) {
@@ -36,7 +35,27 @@ public class QuestionFour {
             }
         }
 
+        HashMap<Book, Integer> hmap = new HashMap<Book, Integer>();
 
+        for (int i = 0; i < books.size(); i++) {
+            System.out.print("Please, enter the number of the shelf where is placed the book" + books.get(i).getTitle());
+            int numShelf = input.nextInt();
+            /*Adding elements to HashMap*/
+            hmap.put(books.get(i), numShelf);
 
+        }
+
+        System.out.print("Insert the number of the shelf");
+        int selectedShelf = input.nextInt();
+        System.out.println("The book in shelf " + selectedShelf + " are:");
+        /* Display content using Iterator*/
+        Set set = hmap.entrySet();
+        Iterator iterator = set.iterator();
+        while(iterator.hasNext()) {
+            Map.Entry entry = (Map.Entry)iterator.next();
+            if(selectedShelf == (int) entry.getValue()){
+                System.out.println(((Book)entry.getKey()).getTitle());
+            }
+        }
     }
 }
