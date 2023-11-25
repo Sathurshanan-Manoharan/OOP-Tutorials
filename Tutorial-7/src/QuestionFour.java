@@ -94,6 +94,11 @@ public class QuestionFour {
         return name;
     }
 
+    /**
+     * Method to validate the year
+     * @param year
+     * @return
+     */
     public static int validateYear(String year){
         Scanner input = new Scanner(System.in);
         int number = 0;
