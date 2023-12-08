@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class CalculatorFrame extends JFrame {
-
     private JTextField txtField;  // Declare txtField at the class level
 
     public CalculatorFrame() {
